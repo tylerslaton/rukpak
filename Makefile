@@ -100,6 +100,12 @@ endif
 e2e: build-local-container kind-cluster kind-load deploy test-e2e ## Run e2e tests against a kind cluster
 
 ## --------------------------------------
+## Deploy
+## --------------------------------------
+push: build-container
+	docker push $(IMAGE)
+
+## --------------------------------------
 ## Hack / Tools
 ## --------------------------------------
 BIN_DIR := bin
